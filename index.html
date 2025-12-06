@@ -4,38 +4,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>الفيديوهات الرائجة عالميًا</title>
-  <meta name="description" content="مشاهدة الفيديوهات الرائجة حول العالم مضمّنة من YouTube مع إمكانية اختيار المنطقة." />
+  <title id="page-title">الفيديوهات الرائجة عالميًا</title>
+  <meta name="description" content="مشاهدة الفيديوهات الرائجة حول العالم مضمّنة من YouTube مع إمكانية اختيار المنطقة واللغة." />
 
-  <!-- كود Auto ads من AdSense (حدّث ca-pub-XXXXXXXXXXXX بقيمتك) -->
-  <script async
-    src="https://pagead2.googlesyndicationgle.js?client=ca-pub-XXXXXXXXXXXXXXXX</script>
-
-  styles.css
+  <!-- AdSense Auto ads (اختياري لاحقًا): استبدل client برقمك -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"les.css
 </head>
 <body>
   <header class="header">
-    <h1>الفيديوهات الرائجة</h1>
+    <h1 id="app-title">الفيديوهات الرائجة</h1>
+
     <div class="controls">
-      <label for="region">المنطقة:</label>
-      <select id="region">
-        <option value="JO" selected>الأردن</option>
-        <option value="US">الولايات المتحدة</option>
-        <option value="GB">المملكة المتحدة</option>
-        <option value="DE">ألمانيا</option>
-        <option value="FR">فرنسا</option>
-        <option value="KR">كوريا الجنوبية</option>
-        <option value="JP">اليابان</option>
-        <option value="IN">الهند</option>
-        <option value="BR">البرازيل</option>
-        <option value="AE">الإمارات</option>
-        <option value="SA">السعودية</option>
-        <option value="EG">مصر</option>
+      <label for="lang" id="label-lang">اللغة:</label>
+      <select id="lang">
+        <option value="ar" selected>العربية</option>
+        <option value="en">English</option>
       </select>
+
+      <label for="region" id="label-region">المنطقة:</label>
+      <select id="region"></select>
+
       <button id="refresh">تحديث</button>
+
+      <label class="privacy-toggle">
+        <input type="checkbox" id="privacyMode" />
+        <span id="privacy-label">وضع الخصوصية (nocookie)</span>
+      </label>
     </div>
 
-    <!-- مساحة إعلان أعلى الصفحة (Display Unit - مثال) -->
+    <!-- مساحة إعلان أعلى الصفحة (اختياري) -->
+    <!--
     <div class="ad-container">
       <ins class="adsbygoogle"
            style="display:block;width:100%;min-height:90px;text-align:center;"
@@ -45,11 +43,17 @@
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+    -->
   </header>
 
   <main id="grid" class="grid" aria-live="polite"></main>
 
-  <!-- مساحة إعلان وسط الصفحة (اختياري) -->
+  <div class="buttons">
+    <button id="loadMore">تحميل المزيد</button>
+  </div>
+
+  <!-- إعلان وسط الصفحة (اختياري) -->
+  <!--
   <div class="ad-container middle">
     <ins class="adsbygoogle"
          style="display:block;width:100%;min-height:280px;text-align:center;"
@@ -59,10 +63,11 @@
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
+  -->
 
   <footer class="footer">
-    <p>ملاحظة: بعض الفيديوهات قد تُعرض على YouTube مباشرةً إذا كانت محدودة عمر/سياسة.</p>
-    <p>© 2025 TrendVids</p>
+    <p id="note">ملاحظة: بعض الفيديوهات قد تُعرض على YouTube مباشرةً إذا كانت محدودة عمر/سياسة.</p>
+    <p id="copy">© 2025 TrendVids</p>
   </footer>
 
   app.js</script>
